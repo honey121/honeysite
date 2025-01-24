@@ -1,110 +1,78 @@
-.login-container {
+/* Personal Website Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 60px; /* Reduced height */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #4caf50; /* WhatsApp Green */
-  padding: 20px;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between brand and nav items */
+  padding: 0 1rem; /* Add padding to prevent content overflow */
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.language-selector {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #ffffff;
-}
-
-.language-selector select {
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.login-card {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.login-title {
+.navbar-brand {
   font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #333333;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Ensure nav items are vertically centered */
+  gap: 1rem; /* Add spacing between items */
 }
 
-.form-label {
+.nav-item .nav-link,
+.nav-item .btn {
   font-size: 1rem;
-  margin-bottom: 5px;
-  display: block;
-  color: #333333;
+  color: #555;
+  padding: 0.25rem 0.75rem; /* Adjust padding to fit navbar height */
+  line-height: 1.5; /* Ensure proper vertical alignment */
+  white-space: nowrap; /* Prevent wrapping of text */
 }
 
-.login-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #4caf50;
+.nav-item .btn {
+  background-color: #007bff;
   border: none;
+  color: white;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
-  background-color: #45a049;
+.nav-item .btn:hover {
+  background-color: #0056b3;
 }
 
-.form-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+.profile-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  border-radius: 50%;
 }
 
-.register-link {
-  margin-top: 20px;
-  font-size: 0.9rem;
+.container {
+  margin-top: 1px;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #333;
 }
 
-.register-text {
-  color: #4caf50;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.register-text:hover {
-  color: #45a049;
-}
-
-.loader {
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #3498db;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  animation: spin 1s linear infinite;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
+p {
+  font-size: 1.1rem;
+  color: #555;
 }
